@@ -22,7 +22,7 @@ class Smsc {
         curl_setopt($ch, CURLOPT_URL, $link);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $res = curl_exec($ch);
-        if (curl_getinfo($ch, CURLINFO_HTTP_CODE) == 200 && substr($res, 0, 3) == 100) {
+        if (curl_getinfo($ch, CURLINFO_HTTP_CODE) == 200) {
             curl_close($ch);
 
             return true;

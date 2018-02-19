@@ -1,5 +1,10 @@
 Changelog for Smsc.
 
+
+1.0.1-pl
+==============
+- Fix send sms with status 100
+
 1.0.0-pl
 ==============
 - Подлючает сервис smsc
