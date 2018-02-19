@@ -1,6 +1,6 @@
 <?php
 
-class Smsckz {
+class Smsc {
     function __construct(modX $modx, array $config = array()) {
         $this->modx = &$modx;
     }
@@ -9,10 +9,9 @@ class Smsckz {
         // Получаем системные настройки для работы и шлём сообщение
         //https://smsc.kz/sys/send.php?login=<login>&psw=<password>&phones=<phones>&mes=<message>
 
-
         $data = array(
-            'login' => '',
-            'psw' => '',
+            'login' => $this->modx->getOption('smsc_login'),
+            'psw' => $this->modx->getOption('smsc_password'),
             'phones' => $phone,
             'mes' => $text
         );
